@@ -24,6 +24,7 @@ pipeline {
                 always {
                     emailext(
                         subject: "Run Tests - ${env.JOB_NAME} #${env.BUILD_NUMBER} - ${currentBuild.currentResult}",
+                        to: 'srungavarapurohith@gmail.com',
                         body: """Run Tests stage completed.
 
 Job: ${env.JOB_NAME}
@@ -51,6 +52,7 @@ Please see the attached Jenkins build log for details.""",
                 always {
                     emailext(
                         subject: "NPM Audit Security Scan - ${env.JOB_NAME} #${env.BUILD_NUMBER} - ${currentBuild.currentResult}",
+                        to: 'srungavarapurohith@gmail.com',
                         body: """NPM Audit (Security Scan) stage completed.
 
 Job: ${env.JOB_NAME}
